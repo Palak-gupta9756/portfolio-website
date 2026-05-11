@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   Base Styles
+======================================== */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans bg-white dark:bg-dark text-gray-900 dark:text-white;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-accent-cyan/30 text-accent-cyan;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-dark-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-dark-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-dark-500;
+  }
+}
+
+/* ========================================
+   Component Styles
+======================================== */
+@layer components {
+  /* Glassmorphism card */
+  .glass {
+    @apply bg-white/60 dark:bg-dark-200/60 backdrop-blur-xl border border-white/20 dark:border-dark-400/30;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-cyan to-accent-purple bg-clip-text text-transparent;
+  }
+
+  /* Gradient border */
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(270deg, #00d4ff, #7c3aed, #ec4899, #00d4ff);
+    background-size: 300% 300%;
+    animation: gradient-x 6s ease infinite;
+  }
+
+  /* Line clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ========================================
+   Utility Styles
+======================================== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
