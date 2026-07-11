@@ -4,10 +4,28 @@ import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
 const experiences = [
   {
+    role: "Zoho Developer Trainee",
+    company: "SimplifiIQ",
+    location: "Dubai, UAE (Remote)",
+    period: "July 2026 – Present",
+    description:
+      "Working on the Zoho ecosystem by developing and customizing CRM solutions, automating business workflows, integrating Zoho applications, and building client-focused solutions using Zoho CRM, Zoho Flow, Zoho SalesIQ, Zoho Campaigns, Zoho FSM, and Zoho Social. Collaborating with the team to optimize business processes and deliver scalable automation solutions.",
+    tags: [
+      "Zoho CRM",
+      "Zoho Flow",
+      "Zoho SalesIQ",
+      "Zoho Campaigns",
+      "Zoho FSM",
+      "Workflow Automation",
+    ],
+    color: "from-amber-500 to-orange-600",
+    current: true,
+  },
+  {
     role: "AI Research Intern",
     company: "SimplifiIQ",
     location: "Dubai, UAE (Remote)",
-    period: "Nov 2025 – Present",
+    period: "Jan 2026 – June 2026",
     description:
       "Designed and implemented AI solutions as part of the core development team, focusing on system efficiency and reliability. Performed debugging, validation, and requirement analysis within the SDLC to deliver optimized application features.",
     tags: ["AI Research", "SDLC", "Debugging", "System Optimization"],
@@ -67,17 +85,15 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
-              className={`relative mb-12 md:w-[calc(50%-2rem)] ${
-                i % 2 === 0 ? "md:ml-auto md:pl-0" : "md:mr-auto md:pr-0"
-              } pl-8 md:pl-0`}
+              className={`relative mb-12 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
+                } pl-8 md:pl-0`}
             >
               {/* Timeline dot */}
               <div
-                className={`absolute left-0 md:${
-                  i % 2 === 0 ? "-left-[calc(50%+0.5rem)]" : "left-[calc(100%+0.5rem)]"
-                } top-6 w-4 h-4 rounded-full bg-gradient-to-r ${exp.color} shadow-lg z-10 md:left-auto ${
-                  i % 2 === 0 ? "md:-left-[2.15rem]" : "md:-right-[2.15rem] md:left-auto"
-                }`}
+                className={`absolute top-6 w-4 h-4 rounded-full bg-gradient-to-r ${exp.color} shadow-lg z-20 ${i % 2 === 0
+                    ? "md:-left-[2rem]"
+                    : "md:-right-[2.2rem]"
+                  }`}
               >
                 {exp.current && (
                   <span className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-cyan to-accent-purple animate-ping opacity-40" />

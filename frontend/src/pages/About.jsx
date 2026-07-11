@@ -15,9 +15,9 @@ const About = () => {
       degree: "B.Tech in Information Technology",
       institution: "Shri Ram Murti Smarak College of Engineering & Technology",
       location: "Bareilly, UP",
-      period: "Oct 2022 – Present",
+      period: "Oct 2022 – May 2026",
       score: "81%",
-      specialization: "Cyber Security (2023–Present)",
+      specialization: "Cyber Security (2023 – May 2026)",
     },
     {
       degree: "Senior Secondary (Class 12)",

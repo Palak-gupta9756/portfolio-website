@@ -62,13 +62,15 @@ const Home = () => {
             >
               <TypeAnimation
                 sequence={[
+                  "Zoho Developer",
+                  2000,
                   "MERN Stack Developer",
                   2000,
                   "Full Stack Developer",
                   2000,
                   "AI Enthusiast",
                   2000,
-                  "B.Tech IT Student",
+                  "B.Tech IT Graduate",
                   2000,
                 ]}
                 wrapper="span"
